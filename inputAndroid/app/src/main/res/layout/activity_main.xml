@@ -28,13 +28,36 @@
         android:textStyle="bold"
         android:layout_marginTop="16dp"
         android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:text = "Price"
+        app:layout_constraintTop_toBottomOf="@id/num"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        app:layout_constraintTop_toBottomOf="@id/price"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"/>
+
     <Button
         android:id="@+id/btn"
         android:onClick="btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Count"
-        app:layout_constraintTop_toBottomOf="@id/num"
+        app:layout_constraintTop_toBottomOf="@id/price_text_view"
         android:layout_marginTop="16dp"
         android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"/>
