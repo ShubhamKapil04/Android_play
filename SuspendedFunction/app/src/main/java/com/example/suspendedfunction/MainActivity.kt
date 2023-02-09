@@ -1,3 +1,9 @@
+/*
+* //This is a MainActivity class which is used to implement CoroutineScope and launch two suspend functions, task1 and task2.
+* The yield() and delay() functions are used to pause the execution of the program for a certain duration of time.
+* */
+
+
 package com.example.suspendedfunction
 
 import androidx.appcompat.app.AppCompatActivity
