@@ -20,22 +20,35 @@ class MainActivity : AppCompatActivity() {
     }
 
     private suspend fun printFollowers() {
-//        var fbFollowers = 0
-//        var instaFollowers = 0
-        val fbFollowers = CoroutineScope(Dispatchers.IO).async {
-            getFbfollowes()
+
+
+        CoroutineScope(Dispatchers.IO).launch {
+            val fb = async {
+                getFbfollowes()
+            }
+            val insta = async {
+                getInstafollowers()
+            }
+
+            Log.d(TAG, "Fb -->  ${fb.await()} Insta -->  ${insta.await()}")
         }
 
-        val instaFollowers = CoroutineScope(Dispatchers.IO).async{
-            getInstafollowers()
-        }
+//        var fbFollowers = 0
+//        var instaFollowers = 0
+//        val fbFollowers = CoroutineScope(Dispatchers.IO).async {
+//            getFbfollowes()
+//        }
+//
+//        val instaFollowers = CoroutineScope(Dispatchers.IO).async{
+//            getInstafollowers()
+//        }
 
 //        job1.join() // This use when we want response from the api call
 //        // And want to suspend the next line to execute before call return
 //        job2.join()
 //        Log.d(TAG, "Fb --> ${fbFollowers.toString()} Insta --> ${instaFollowers.toString()}")
 
-        Log.d(TAG, "Fb -->  ${fbFollowers.await()} Insta -->  ${instaFollowers.await()}")
+
     }
 
     private suspend fun getInstafollowers() : Int{
