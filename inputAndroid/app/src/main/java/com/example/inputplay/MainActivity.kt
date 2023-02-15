@@ -15,17 +15,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         counterText = findViewById(R.id.num)
-        displayPrice(2 * 5)
+        val button = findViewById<Button>(R.id.btn)
+        var numberofCup : Int = 0
+        button.setOnClickListener {
+            numberofCup++
+            counterText.text = "${numberofCup}"
+            displayPrice(numberofCup)
+//            text = "${counterText.text.toString().toInt()}"
+        }
     }
 
-    fun btn(view: View) {
-        counterText.text = "${counterText.text.toString().toInt() + 1 * 2}"
-    }
-    /*
+     private fun displayPrice(numberofCup: Int) {
+         //This will store the view for price
+         val priceText = findViewById<TextView>(R.id.price_text_view)
+         val price_of_Cup = 10
+//         priceText = numberofCup + price_of_Cup
+         priceText.setText("${numberofCup * price_of_Cup}")
+     }
+}
+
+
+/*
 * This method display the given quantity value on the screen
 * */
-    fun displayPrice(int: Int){
-        val priceTextView = findViewById<TextView>(R.id.price_text_view)
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(int))
-    }
-}
