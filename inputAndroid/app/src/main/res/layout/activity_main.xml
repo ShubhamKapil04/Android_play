@@ -17,27 +17,52 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         />
+
+    <Button
+        android:id="@+id/increment_btn"
+        android:layout_width="44dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:text="+"
+        android:textSize="13sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Quality"
+        />
+
     <TextView
         android:id="@+id/num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
         android:text="@string/_0"
-        app:layout_constraintTop_toBottomOf="@id/Quality"
-        app:layout_constraintStart_toStartOf="parent"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="10dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/increment_btn" />
+
+    <Button
+        android:id="@+id/decrement_btn"
+        android:layout_width="44dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="-"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num"
+        />
 
     <TextView
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:text="Price"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="10dp"
-        android:text = "Price"
-        app:layout_constraintTop_toBottomOf="@id/num"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/decrement_btn" />
 
     <TextView
         android:id="@+id/price_text_view"
@@ -53,7 +78,6 @@
 
     <Button
         android:id="@+id/btn"
-        android:onClick="btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Count"
