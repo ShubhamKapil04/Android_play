@@ -38,9 +38,9 @@ class MainActivity : AppCompatActivity() {
      private fun displayPrice(numberofCup: Int) {
          //This will store the view for price
          val priceText = findViewById<TextView>(R.id.price_text_view)
-         val price_of_Cup = 10
+         val price_of_Cup = 5
 //         priceText = numberofCup + price_of_Cup
-         priceText.setText("${numberofCup * price_of_Cup}")
+         priceText.setText("Total : $${numberofCup * price_of_Cup}")
      }
 
 
