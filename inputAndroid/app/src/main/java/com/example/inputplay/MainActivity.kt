@@ -41,7 +41,14 @@ class MainActivity : AppCompatActivity() {
          val price_of_Cup = 5
 //         priceText = numberofCup + price_of_Cup
          priceText.setText("Total : $${numberofCup * price_of_Cup}")
+         displayMessage()
      }
+
+    private fun displayMessage(){
+        val message: String = "ThankYou"
+        var messageD = findViewById<TextView>(R.id.message)
+        messageD.setText(message)
+    }
 
 
 }
