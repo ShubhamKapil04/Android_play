@@ -19,16 +19,16 @@ class MainActivity : AppCompatActivity() {
         val inc = findViewById<Button>(R.id.increment_btn)
         val dec = findViewById<Button>(R.id.decrement_btn)
         var numberofCup : Int = 0
-        inc.setOnClickListener {
+        inc.setOnClickListener() {
             numberofCup++
             numText.text = "${numberofCup}"
 
         }
-        dec.setOnClickListener {
+        dec.setOnClickListener() {
             numberofCup--
             numText.text = "${numberofCup}"
         }
-        button.setOnClickListener {
+        button.setOnClickListener() {
             counterText.text = "${numberofCup}"
             displayPrice(numberofCup)
 //            text = "${counterText.text.toString().toInt()}"
