@@ -55,15 +55,15 @@
 
 
     <TextView
-        android:id="@+id/price"
+        android:id="@+id/orderSummary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Price"
+        android:text="Order Summary"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp" />
 
     <TextView
-        android:id="@+id/price_text_view"
+        android:id="@+id/order_summary_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$0"
@@ -72,14 +72,14 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="10dp"/>
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="10dp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/message"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginStart="10dp"/>-->
 
     <Button
         android:id="@+id/btn"
