@@ -65,7 +65,6 @@ class MainActivity : AppCompatActivity() {
         return numberofCup * price_of_cup
     }
 
-
 }
 
 
