@@ -7,7 +7,7 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    /*override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val textView = TextView(this)
@@ -15,5 +15,5 @@ class MainActivity : AppCompatActivity() {
         textView.text = "Wow!"
 
         setContentView(textView)
-    }
+    } */
 }
